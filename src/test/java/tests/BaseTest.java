@@ -7,17 +7,14 @@ import org.junit.jupiter.api.BeforeAll;
 
 public class BaseTest {
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl = "https://www.github.com";
-        Configuration.holdBrowserOpen = true;
-
+        // Configuration.holdBrowserOpen = true;
     }
 
     @AfterEach
-    void afterEach(){
+    void afterEach() {
         Selenide.closeWebDriver();
     }
-
 }
